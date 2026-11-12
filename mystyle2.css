@@ -1,0 +1,407 @@
+
+/* GENERAL PAGE STYLES */
+body {
+    background-color: rgb(238, 244, 244); /* Sets the default background color */
+    color: rgb(31, 31, 31); /* Sets the default text color */
+    font-family: 'Trebuchet MS', sans-serif; /* Defines the website typography */
+    margin: 0; /* Removes the default page margin */
+    padding-top: 0px; /* Reserves space for the fixed header */
+}
+
+/* GENERAL SECTION STYLES */
+main section {
+    min-height: 100vh; /* Makes every section at least as tall as the full viewport */
+    box-sizing: border-box; /* Includes padding within the section dimensions */
+    padding: 60px max(30px, calc((100% - 1280px) / 2)); /* Keeps content aligned consistently */
+}
+
+/* SECTION BACKGROUND COLORS */
+.hero {
+    background-color: #EEF4F4; /* Sets a light background for the homepage */
+}
+
+.portfolio {
+    background-color: #FFFFFF; /* Creates a clean gallery background */
+}
+
+#about {
+    background-color: #E0EBEF; /* Adds a subtle blue-gray background */
+}
+
+#contact {
+    background-color: #20272D; /* Creates a dark contact section */
+    color: white; /* Sets the contact text color */
+}
+
+
+/* HEADER */
+header {
+    background-color: transparent; /* Makes the header background invisible */
+    color: white; /* Sets the default header text color */
+    height: 100px; /* Defines the header height */
+    padding: 0 30px; /* Adds horizontal spacing inside the header */
+
+    display: flex; /* Arranges the logo and navigation horizontally */
+    justify-content: space-between; /* Places the logo left and navigation right */
+    align-items: center; /* Centers both elements vertically */
+
+    position: fixed; /* Keeps the header visible while scrolling */
+    top: 0; /* Positions the header at the top */
+    left: 0; /* Positions the header at the left edge */
+    width: 100%; /* Makes the header span the screen width */
+    box-sizing: border-box; /* Includes padding within the header width */
+    z-index: 1000; /* Keeps the header above page content */
+
+    transition: transform 0.3s ease-in-out; /* Smoothly moves the header when hiding or showing */
+
+}
+
+
+/* HIDDEN HEADER WHEN SCROLLING DOWN */
+header.header-hidden {
+    transform: translateY(-100%); /* Moves the entire header above the screen */
+}
+
+
+/* LOGO */
+.logo {
+    display: flex; /* Aligns the logo image */
+    align-items: center; /* Centers the image vertically */
+    background-color: rgb(28, 29, 29); /* Adds a dark background behind the logo */
+    padding: 8px 15px; /* Adds space around the logo */
+    border-radius: 15px; /* Rounds the logo background */
+}
+
+.logo img {
+    height: 60px; /* Sets the logo height */
+    width: auto; /* Preserves the image proportions */
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex; /* Arranges navigation items horizontally */
+    list-style: none; /* Removes list bullet points */
+    margin: 0; /* Removes the default margin */
+    padding: 15px 35px; /* Adds space inside the pill */
+    gap: 35px; /* Adds space between navigation items */
+
+    background-color: black; /* Creates the black pill background */
+    border-radius: 100px; /* Gives the navigation its pill shape */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Adds a soft shadow */
+}
+
+nav a {
+    display: block; /* Allows padding around each link */
+    padding: 12px 20px; /* Adds space inside each link */
+    color: white; /* Makes the navigation text white */
+    text-decoration: none; /* Removes link underlines */
+    font-size: 18px; /* Sets the navigation font size */
+    border-radius: 50px; /* Rounds the link background */
+    transition: background-color 0.3s; /* Smooths hover effects */
+}
+
+nav a:hover {
+    background-color: #555; /* Highlights the navigation item on hover */
+}
+
+/* SCROLLING */
+html {
+    scroll-padding-top: 0px; /* Prevents anchor links from hiding content behind the header */
+    scroll-behavior: smooth; /* Adds smooth movement when clicking navigation links */
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: black; /* Changes the background to black */
+    color: white; /* Changes the text color to white */
+}
+
+/* HIDDEN ELEMENTS */
+.hidden {
+    display: none; /* Hides an element from the page */
+}
+
+
+/* HERO SECTION */
+.hero {
+    display: flex; /* Places the introduction and image side by side */
+    align-items: center; /* Centers both elements vertically */
+    justify-content: space-between; /* Separates text from image */
+    gap: 40px; /* Adds space between both columns */
+}
+
+/* HERO TEXT */
+.hero-text {
+    flex: 1; /* Gives the text area flexible space */
+    min-width: 0; /* Allows the text area to shrink */
+}
+
+.hero-text h1 {
+    font-size: 60px; /* Creates a prominent main heading */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.hero-text p {
+    font-size: 18px; /* Sets the introduction font size */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1; /* Gives the image area flexible space */
+    min-width: 0; /* Allows the image container to shrink */
+    display: flex; /* Allows image alignment */
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+}
+
+.hero-image img {
+    max-width: 100%; /* Prevents the image from exceeding its container width */
+    max-height: calc(100vh - 220px); /* Limits the image height based on the viewport */
+    width: auto; /* Preserves image proportions */
+    height: auto; /* Preserves image proportions */
+    object-fit: contain; /* Displays the complete image without cropping */
+}
+
+/* HERO BUTTON */
+.hero-button {
+    display: inline-block; /* Allows padding around the button */
+    padding: 15px 25px; /* Adds space inside the button */
+    background-color: black; /* Sets the button background */
+    color: white; /* Sets the button text color */
+    text-decoration: none; /* Removes the underline */
+    border-radius: 30px; /* Creates rounded corners */
+}
+
+.hero-button:hover {
+    background-color: #555; /* Changes the button background on hover */
+}
+
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    display: flex; /* Uses Flexbox to arrange portfolio content */
+    flex-direction: column; /* Stacks the heading, description, and gallery */
+    justify-content: center; /* Centers the portfolio content vertically */
+}
+
+.portfolio h2 {
+    font-size: 36px; /* Makes the portfolio heading larger */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* PROJECT GALLERY */
+.project-container {
+    display: flex; /* Arranges the project cards horizontally */
+    gap: 25px; /* Adds space between the cards */
+    margin-top: 30px; /* Adds space above the gallery */
+    align-items: stretch; /* Makes cards equal in height */
+}
+
+/* PROJECT CARDS */
+.project-card {
+    flex: 1; /* Gives each card an equal share of available space */
+    min-width: 0; /* Allows cards to shrink */
+    background-color: #F5F7F7; /* Separates cards from the white gallery background */
+    padding: 15px; /* Adds space inside each card */
+    border-radius: 10px; /* Rounds the card corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooths hover effects */
+    box-sizing: border-box; /* Includes padding within the card width */
+}
+
+/* PROJECT CARD HOVER */
+.project-card:hover {
+    transform: translateY(-5px); /* Moves the card slightly upward */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Makes the shadow stronger */
+}
+
+/* PROJECT IMAGES */
+.project-card img {
+    width: 100%; /* Makes the image fill the card width */
+    height: 220px; /* Gives all project images the same height */
+    object-fit: cover; /* Fills the image area without distortion */
+    border-radius: 6px; /* Rounds the image corners */
+}
+
+/* PROJECT TITLES */
+.project-card h3 {
+    font-size: 22px; /* Sets the project title size */
+    margin-bottom: 10px; /* Adds space below the title */
+}
+
+/* PROJECT DESCRIPTIONS */
+.project-card p {
+    font-size: 16px; /* Sets the description text size */
+    line-height: 1.5; /* Improves readability */
+    color: #555; /* Uses a softer text color */
+}
+
+
+/* ABOUT ME SECTION */
+#about {
+    display: flex; /* Places the biography and image side by side */
+    align-items: center; /* Centers both elements vertically */
+    justify-content: space-between; /* Separates text and image */
+    gap: 60px; /* Adds space between both columns */
+}
+
+/* ABOUT ME TEXT */
+.about-text {
+    flex: 1.2; /* Gives the text slightly more space than the image */
+    min-width: 0; /* Allows the text area to shrink */
+}
+
+.about-text h2 {
+    font-size: 48px; /* Makes the heading larger */
+    margin-bottom: 25px; /* Adds space below the heading */
+}
+
+.about-text p {
+    font-size: 18px; /* Sets the biography font size */
+    line-height: 1.7; /* Improves readability */
+    color: #444; /* Uses a softer text color */
+}
+
+/* SKILLS LIST */
+.about-text ul {
+    padding-left: 25px; /* Indents the bullet list */
+    margin-top: 25px; /* Adds space above the list */
+}
+
+.about-text li {
+    font-size: 18px; /* Sets the skill font size */
+    padding: 8px 0; /* Adds space between skills */
+}
+
+/* ARTIST PICTURE */
+.about-image {
+    flex: 1; /* Gives the image area flexible space */
+    min-width: 0; /* Allows the image area to shrink */
+}
+
+.about-image img {
+    width: 100%; /* Makes the image fill its container */
+    max-height: 500px; /* Prevents the image from becoming too tall */
+    object-fit: cover; /* Fills the image area without distortion */
+    border-radius: 20px; /* Rounds the image corners */
+    box-shadow: 15px 15px 0 #c5dce3; /* Creates a decorative offset shadow */
+}
+
+
+/* CONTACT SECTION */
+#contact {
+    background-color: #20272D; /* Creates a darker final section */
+    color: white; /* Makes the text readable on the dark background */
+}
+
+/* CONTACT BUTTON */
+.contact-button {
+    display: inline-block; /* Allows padding around the link */
+    margin-top: 20px; /* Adds space above the button */
+    padding: 15px 30px; /* Adds space inside the button */
+    background-color: #D1E8F0; /* Uses a light blue background */
+    color: #20272D; /* Sets the text color */
+    text-decoration: none; /* Removes the link underline */
+    border-radius: 30px; /* Creates a rounded button */
+    font-weight: bold; /* Makes the text stand out */
+    transition: background-color 0.3s, transform 0.3s; /* Adds smooth hover effects */
+}
+
+/* CONTACT BUTTON HOVER */
+.contact-button:hover {
+    background-color: white; /* Changes the background when hovered */
+    transform: translateY(-3px); /* Moves the button slightly upward */
+}
+
+
+/* FOOTER */
+footer {
+    display: flex; /* Arranges footer elements using Flexbox */
+    justify-content: space-between; /* Separates branding and social icons */
+    align-items: center; /* Aligns both elements vertically */
+    flex-wrap: wrap; /* Allows elements to move to another row */
+    gap: 25px; /* Adds space between footer elements */
+    padding: 35px 60px 20px; /* Adds spacing inside the footer */
+    background-color: #11171B; /* Uses a darker shade than the Contact section */
+    color: white; /* Sets the footer text color */
+}
+
+/* FOOTER BRANDING */
+.footer-brand h3 {
+    font-size: 24px; /* Sets the studio name size */
+    margin: 0; /* Removes the default heading margin */
+}
+
+.footer-brand p {
+    font-size: 14px; /* Sets the tagline size */
+    color: #9EADB5; /* Uses a softer text color */
+    margin: 8px 0 0; /* Adds space above the tagline */
+}
+
+/* FOOTER SOCIAL MEDIA */
+.footer-social {
+    display: flex; /* Arranges social media icons horizontally */
+    align-items: center; /* Centers the icons vertically */
+    gap: 15px; /* Adds space between icons */
+}
+
+.footer-social a {
+    display: flex; /* Allows the icon to be centered */
+    align-items: center; /* Centers the icon vertically */
+    justify-content: center; /* Centers the icon horizontally */
+    width: 45px; /* Sets the button width */
+    height: 45px; /* Sets the button height */
+    background-color: #28343B; /* Adds a subtle background behind each icon */
+    color: white; /* Makes the icons white */
+    border-radius: 50%; /* Creates circular buttons */
+    font-size: 20px; /* Sets the icon size */
+    text-decoration: none; /* Removes link decoration */
+    transition: background-color 0.3s, transform 0.3s; /* Smooths hover effects */
+}
+
+.footer-social a:hover {
+    background-color: #537B9B; /* Changes the circle to blue on hover */
+    transform: translateY(-4px); /* Moves the icon slightly upward */
+}
+
+/* FOOTER COPYRIGHT */
+.footer-bottom {
+    width: 100%; /* Places copyright on a separate row */
+    border-top: 1px solid #354047; /* Adds a subtle divider */
+    padding-top: 15px; /* Adds space above the copyright */
+}
+
+.footer-bottom p {
+    margin: 0; /* Removes the default paragraph margin */
+    font-size: 13px; /* Uses smaller text for copyright */
+    color: #83949B; /* Makes copyright less visually prominent */
+}
+
+
+
+
+
+/* OWL FLOATING ANIMATION */
+@keyframes owlFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg); /* Original position */
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(6deg); /* Floats upward and tilts slightly */
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg); /* Floats upward and tilts slightly */
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-6deg); /* Floats upward and tilts slightly */
+    }
+}
+
+/* APPLY ANIMATION TO THE HERO IMAGE */
+.hero-image img {
+    animation: owlFloat 3s ease-in-out infinite; /* Creates a smooth, continuous floating movement */
+}

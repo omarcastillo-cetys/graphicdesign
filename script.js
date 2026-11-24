@@ -15,7 +15,7 @@ function toggleDarkMode()
 
 function toggleContact()
 {
- document.getElementById("contact").classList.toggle("hidden");
+ document.getElementById("skills").classList.toggle("hidden");
 }
 
 
@@ -65,3 +65,6 @@ document.addEventListener("mousemove", function(event) {
 
 });
 
+function toggleMenu() {
+    document.querySelector("nav").classList.toggle("menu-open");
+}

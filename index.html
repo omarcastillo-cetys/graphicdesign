@@ -21,6 +21,7 @@
         <!-- Add your name or personal logo -->
         <a href="#home" class="logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/orl.png" ></a>
 
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button> 
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -124,20 +125,19 @@
             <!-- Add a section heading (h2) -->
              <h2>Who am I</h2>
             <!-- Write a short biography -->
-             <p>Bla bla bla bla Bla bla bla blaBla bla bla blaBla bla bla bla
-                Bla bla bla blaBla bla bla blaBla bla bla blaBla bla bla bla
-                Bla bla bla blaBla bla bla blaBla bla bla blaBla bla bla bla
-                Bla bla bla blaBla bla bla blaBla bla bla blaBla bla bla bla
-                Bla bla bla blaBla bla bla blaBla bla bla blaBla bla bla bla
-                Bla bla bla blaBla bla bla blaBla bla bla blaBla bla bla bla
+             <p>I'm a passionate graphic designer who enjoys transforming creative ideas into meaningful visual experiences. My work focuses on combining creativity, functionality, and storytelling to develop designs that connect with people.
+                I specialize in branding, illustration, and digital design, always looking for new ways to communicate ideas through colors, shapes, and typography. Every project is an opportunity to explore different styles, experiment with new techniques, and create something unique.                
+                I believe good design should not only look attractive but also communicate a clear message and provide a memorable experience. My goal is to continue growing as a creative professional while helping individuals and businesses bring their visions to life.
              </p>
             <!-- Include your skills and design interests -->
-             <ul>
+            <h3 onclick="toggleContact()">Show My Skills ^</h3>
+
+            <ul id="skills" class="hidden">
                 <li>Graphic Designer</li>
                 <li>Branding</li>
                 <li>Consultant</li>
                 <li>Illustration</li>
-             </ul>
+            </ul>
             </div>
 
             <div class="about-image">
@@ -196,6 +196,8 @@
     <!-- COPYRIGHT -->
     <div class="footer-bottom">
         <p>© 2026 Magic Owl Studio. All rights reserved.</p>
+        <!-- BACK TO TOP LINK -->
+        <a href="#home" class="back-to-top">↑ Back to Top</a>
     </div>
 
     </footer>

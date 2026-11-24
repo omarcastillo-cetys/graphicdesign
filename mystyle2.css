@@ -291,6 +291,7 @@ html {
 
 /* CONTACT SECTION */
 #contact {
+    min-height: 500px; /* Allows the section height to depend on its content */
     background-color: #20272D; /* Creates a darker final section */
     color: white; /* Makes the text readable on the dark background */
 }
@@ -367,9 +368,12 @@ footer {
 
 /* FOOTER COPYRIGHT */
 .footer-bottom {
-    width: 100%; /* Places copyright on a separate row */
+    width: 100%; /* Makes the bottom section use the full footer width */
+    display: flex; /* Arranges copyright and Back to Top horizontally */
+    justify-content: space-between; /* Places copyright left and Back to Top right */
+    align-items: center; /* Aligns both elements vertically */
     border-top: 1px solid #354047; /* Adds a subtle divider */
-    padding-top: 15px; /* Adds space above the copyright */
+    padding-top: 15px; /* Adds space above the content */
 }
 
 .footer-bottom p {
@@ -405,3 +409,101 @@ footer {
 .hero-image img {
     animation: owlFloat 3s ease-in-out infinite; /* Creates a smooth, continuous floating movement */
 }
+
+
+
+/* CLICKABLE SKILLS HEADING */
+.about-text h3 {
+    cursor: pointer; /* Indicates that the heading is clickable */
+}
+
+.about-text h3:hover {
+    color: #537B9B; /* Changes the heading color when hovered */
+}
+
+/* ABOUT ME SKILLS LIST */
+.about-text ul {
+    background-color: transparent; /* Removes the dark background */
+    color: inherit; /* Uses the text color from the parent element */
+}
+
+
+
+/* BACK TO TOP LINK */
+.back-to-top {
+    display: inline-block; /* Allows padding around the link */
+    color: #D1E8F0; /* Uses the light blue accent color */
+    text-decoration: none; /* Removes the underline */
+    font-size: 16px; /* Sets the text size */
+    font-weight: bold; /* Makes the text stand out */
+    transition: color 0.3s, transform 0.3s; /* Adds smooth hover effects */
+}
+
+/* BACK TO TOP HOVER */
+.back-to-top:hover {
+    color: white; /* Changes the text color when hovered */
+    transform: translateY(-5px); /* Moves the link slightly upward */
+}
+
+/* Hamburger Menu */
+
+.menu-toggle{
+    display: none;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+    
+    .project-container {
+       flex-direction: column;
+    }
+
+   /* Menu Toggle */
+.menu-toggle{
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 22px 18px;
+    cursor: pointer;
+}
+ 
+    /* NAVIGATION */
+nav {
+    display: none; /* Arranges navigation items horizontally */
+    position: absolute;
+    top: 90px;
+    right: 30px;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+nav.menu-open {
+    display: block;
+}
+
+nav a {
+    display: block; /* Allows padding around each link */
+    padding: 12px 20px; /* Adds space inside each link */
+    color: white; /* Makes the navigation text white */
+    text-decoration: none; /* Removes link underlines */
+    font-size: 18px; /* Sets the navigation font size */
+    border-radius: 50px; /* Rounds the link background */
+    transition: background-color 0.3s; /* Smooths hover effects */
+}
+
+nav a:hover {
+    background-color: #555; /* Highlights the navigation item on hover */
+}
+
+
+    /* This CSS rule will work for screens 768px wide or smaller */
+}
+
